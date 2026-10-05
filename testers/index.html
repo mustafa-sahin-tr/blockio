@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blockio Test Ekibi</title>
+  <meta name="description" content="Blockio: Time Rush kapalı test sayfası — nasıl katılırsın, neyi test edersin, geri bildirimi nasıl verirsin.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // Apply the saved language before first paint. Storage can be blocked: never let that break the page.
+    (function () {
+      var lang = "tr";
+      try { lang = localStorage.getItem("blockio-lang") || "tr"; } catch (e) {}
+      if (lang === "en") {
+        document.documentElement.classList.add("lang-en");
+        document.documentElement.lang = "en";
+      }
+    })();
+  </script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../icon.png" alt="" width="36" height="36">
+      <span>Blockio</span>
+    </a>
+    <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language / Dili değiştir">
+      <span class="tr">EN</span><span class="en">TR</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <img class="icon" src="../icon.png" alt="Blockio: Time Rush" width="120" height="120">
+    <h1>Blockio: Time Rush</h1>
+    <p class="tag tr">Kapalı teste hoş geldin! Oyunu herkesten önce oynayıp bize yol gösterdiğin için çok teşekkürler.</p>
+    <p class="tag en">Welcome to the closed test! Thank you for playing before everyone else and helping us shape the game.</p>
+    <span class="pill tr">Android + iOS · Kapalı test</span>
+    <span class="pill en">Android + iOS · Closed test</span>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- What the game is -->
+  <section class="card" id="game">
+    <h2><span class="dot"></span><span class="tr">Oyun ne?</span><span class="en">What is the game?</span></h2>
+    <div class="tr">
+      <p>Blockio bir blok yerleştirme bulmacası. <strong>8×8</strong> bir tahta var; altta her seferinde <strong>3 parça</strong> gelir. Parçaları sürükleyip tahtaya bırakırsın, dolan <strong>satır ve sütunlar silinir</strong>. Üç parça da yerleşince yeni üçlü gelir. Yer gelmeyen parça kalınca oyun biter.</p>
+      <p>Yer çekimi yok, bloklar düşmez; parçalar döndürülemez (bunu yapan tek şey Döndür gücü). Yani iş hız değil, plan işi. Geri alma da yok.</p>
+    </div>
+    <div class="en">
+      <p>Blockio is a block-placement puzzle. There is an <strong>8×8</strong> board and a tray of <strong>3 pieces</strong>. Drag pieces onto the board; any <strong>full row or column clears</strong>. When all three are placed, three new ones arrive. The run ends when no piece left in the tray fits.</p>
+      <p>There is no gravity, blocks never fall, and pieces can't be rotated (only the Rotate power-up does that). It's about planning, not speed. There is no undo.</p>
+    </div>
+
+    <div class="grid two">
+      <div class="box">
+        <h3>Macera</h3>
+        <div class="tr">
+          <p>Önce Türkiye'yi, sonra başka ülkeleri gezdiğin bir yolculuk. Her levelin hedefleri var (buz kır, meyve topla, puan yap…), bazı levellerde hamle sınırı, bazılarında süre var (Time Rush levelleri). Güçler ve <strong>canlar</strong> burada.</p>
+          <p>Levellerden kazandığın <strong>tuğla</strong> ile haritadaki gerçek yerlerin kil maketlerini inşa edersin: Galata, Kapadokya, Pamukkale…</p>
+        </div>
+        <div class="en">
+          <p>A journey across Türkiye, then other countries. Every level has goals (break ice, collect fruit, reach a score…); some have a move limit, some a clock (Time Rush levels). Power-ups and <strong>lives</strong> live here.</p>
+          <p>With the <strong>bricks</strong> you earn, you build clay models of real landmarks on the map: Galata, Cappadocia, Pamukkale…</p>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Klasik</h3>
+        <div class="tr">
+          <p>Sade bir puan oyunu: sadece puan ve en iyi puan. Hedef, güç, can yok. Sınırsız ya da süreli oynanır. Puan arttıkça tahtanın teması ve blokların görünümü değişir.</p>
+        </div>
+        <div class="en">
+          <p>A plain score game: just your score and best score. No goals, no power-ups, no lives. Play it unlimited or timed. As your score climbs, the board theme and block look change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to join -->
+  <section class="card" id="join">
+    <h2><span class="dot blue"></span><span class="tr">Nasıl katılırım?</span><span class="en">How do I join?</span></h2>
+    <div class="grid two">
+      <div class="box">
+        <h3>Android</h3>
+        <ol class="steps tr">
+          <li>Test davetinde kullandığın Google hesabıyla bu bağlantıyı aç ve <strong>"Test kullanıcısı ol"</strong>a bas:<br><a class="btn" href="https://play.google.com/apps/testing/com.mtafasahin.blockiotimerush">Teste katıl</a></li>
+          <li>Aynı sayfadaki <strong>Google Play'den indir</strong> bağlantısıyla oyunu yükle (listede görünmesi birkaç dakika sürebilir).</li>
+          <li>Güncellemeler normal bir uygulama gibi Play Store'dan gelir.</li>
+        </ol>
+        <ol class="steps en">
+          <li>Open this link with the Google account you were invited with and tap <strong>"Become a tester"</strong>:<br><a class="btn" href="https://play.google.com/apps/testing/com.mtafasahin.blockiotimerush">Join the test</a></li>
+          <li>Install the game from the <strong>Download it on Google Play</strong> link on that page (it can take a few minutes to show up).</li>
+          <li>Updates arrive from the Play Store like any other app.</li>
+        </ol>
+      </div>
+      <div class="box">
+        <h3>iPhone / iPad</h3>
+        <ol class="steps tr">
+          <li>App Store'dan Apple'ın <strong>TestFlight</strong> uygulamasını yükle.</li>
+          <li>Telefonunda davet bağlantısını aç ve <strong>Kabul et → Yükle</strong>'ye bas:<br><a class="btn" href="https://testflight.apple.com/">TestFlight daveti</a></li>
+          <li>Yeni test sürümleri TestFlight'ta görünür; oradan güncelle.</li>
+        </ol>
+        <ol class="steps en">
+          <li>Install Apple's <strong>TestFlight</strong> app from the App Store.</li>
+          <li>Open the invite link on your phone and tap <strong>Accept → Install</strong>:<br><a class="btn" href="https://testflight.apple.com/">TestFlight invite</a></li>
+          <li>New test builds show up in TestFlight; update from there.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to test -->
+  <section class="card" id="test">
+    <h2><span class="dot coral"></span><span class="tr">Neyi test edelim?</span><span class="en">What should I test?</span></h2>
+    <div class="tr">
+      <p>Normal oyna, keyfine bak. Takıldığın, sıkıldığın ya da şaşırdığın her an bizim için değerli. Özellikle şunlara göz at:</p>
+      <ul>
+        <li><strong>İlk 30 level:</strong> akış nasıl, zorluk yerinde mi, bir yerde çok mu takıldın? Level 20 ve 30 süreli <em>Time Rush</em> levelleri.</li>
+        <li><strong>Öğretici leveller (1–5):</strong> anlatım açık mı? Satır silme, kombo, buz, Cep ve ilk güç (Bomba).</li>
+        <li><strong>Güçler:</strong> tahtanın altındaki 5'li çubuk — <strong>Bomba, Satır, Sütun, Joker, Renk</strong> (Bomba, Satır ve Sütun tahtaya sürüklenir). Tepsinin altında <strong>Döndür</strong> ve <strong>Yenile</strong>, tahtanın köşesinde <strong>x2</strong>. Güçler levelle açılır: Joker 10, Renk 15, Döndür 20, Yenile 25, x2 30.</li>
+        <li><strong>Maket inşası:</strong> level 10'dan itibaren tuğlayla maket yap, bölgeyi tamamla.</li>
+        <li><strong>Bölgelerim</strong> ekranı (haritanın sol kenarında).</li>
+        <li><strong>Günlük hediye — Şans Bloğu</strong> (level 13'ten sonra açılır).</li>
+        <li><strong>Mağaza</strong> ve fırsatlar.</li>
+        <li><strong>Avatarlar ve aksesuarlar</strong> (Profil). Yeni avatarlar level 12'den itibaren gelir.</li>
+        <li><strong>Instagram'da paylaşma:</strong> yeni rozet, biten maket, bölge, sıralama gibi anlardaki paylaş düğmesi. Görsel düzgün mü, Hikaye'ye gidiyor mu?</li>
+        <li><strong>Klasik</strong> mod: Sınırsız ve süreli.</li>
+      </ul>
+      <ul class="chips">
+        <li>8×8</li><li>3 parça</li><li>Macera</li><li>Klasik</li><li>20 can</li><li>Tuğla</li>
+      </ul>
+    </div>
+    <div class="en">
+      <p>Just play and enjoy it. Every moment you get stuck, bored or confused is valuable to us. Please look especially at:</p>
+      <ul>
+        <li><strong>The first 30 levels:</strong> does the flow feel right, is the difficulty fair, did you get stuck anywhere? Levels 20 and 30 are timed <em>Time Rush</em> levels.</li>
+        <li><strong>Tutorial levels (1–5):</strong> are they clear? Clearing lines, combos, ice, the Pocket and the first power-up (Bomb).</li>
+        <li><strong>Power-ups:</strong> the bar of 5 under the board — <strong>Bomb, Row, Column, Joker, Colour</strong> (Bomb, Row and Column are dragged onto the board). <strong>Rotate</strong> and <strong>Refresh</strong> under the tray, and <strong>x2</strong> on the board corner. They unlock by level: Joker 10, Colour 15, Rotate 20, Refresh 25, x2 30.</li>
+        <li><strong>Landmark building:</strong> from level 10, build models with bricks and finish a region.</li>
+        <li>The <strong>My Regions</strong> screen (Bölgelerim, on the map's left edge).</li>
+        <li><strong>Daily gift — Lucky Block</strong> (opens after level 13).</li>
+        <li>The <strong>shop</strong> and deals.</li>
+        <li><strong>Avatars and accessories</strong> (Profile). New avatars arrive from level 12.</li>
+        <li><strong>Sharing to Instagram:</strong> the share button on moments like a new badge, a finished landmark, a region or a leaderboard rank. Does the image look right, does it reach Stories?</li>
+        <li><strong>Klasik</strong> mode: unlimited and timed.</li>
+      </ul>
+      <ul class="chips">
+        <li>8×8</li><li>3 pieces</li><li>Macera</li><li>Klasik</li><li>20 lives</li><li>Bricks</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Feedback -->
+  <section class="card" id="feedback">
+    <h2><span class="dot"></span><span class="tr">Geri bildirim</span><span class="en">Feedback</span></h2>
+    <div class="tr">
+      <p>Bir hata, fikir ya da "bu ne?" anı mı? Bize yaz:</p>
+      <ul>
+        <li>Geri bildirim formu: <a href="mailto:mtafasahin@gmail.com">mtafasahin@gmail.com</a></li>
+        <li>Instagram'dan DM: <a href="https://instagram.com/blockiotimerush">@blockiotimerush</a></li>
+        <li>iPhone'da TestFlight ile: oyundayken <strong>ekran görüntüsü al</strong>, açılan önizlemede <strong>Beta Geri Bildirimi Paylaş</strong>'ı seç. Ya da TestFlight uygulamasında Blockio → <strong>Beta Geri Bildirimi Gönder</strong>.</li>
+      </ul>
+      <p class="note"><strong>Lütfen şunları ekle:</strong> telefon modeli ve işletim sistemi sürümü, level numarası (ya da Klasik), ne yaptın / ne oldu / ne bekliyordun, mümkünse ekran görüntüsü veya kısa video.</p>
+    </div>
+    <div class="en">
+      <p>Found a bug, have an idea, or had a "what is this?" moment? Tell us:</p>
+      <ul>
+        <li>Feedback form: <a href="mailto:mtafasahin@gmail.com">mtafasahin@gmail.com</a></li>
+        <li>Instagram DM: <a href="https://instagram.com/blockiotimerush">@blockiotimerush</a></li>
+        <li>On iPhone with TestFlight: <strong>take a screenshot</strong> in the game and choose <strong>Share Beta Feedback</strong> in the preview. Or open TestFlight → Blockio → <strong>Send Beta Feedback</strong>.</li>
+      </ul>
+      <p class="note"><strong>Please include:</strong> your phone model and OS version, the level number (or Klasik), what you did / what happened / what you expected, and a screenshot or short video if you can.</p>
+    </div>
+  </section>
+
+  <!-- Notes -->
+  <section class="card" id="notes">
+    <h2><span class="dot blue"></span><span class="tr">Bilmen gerekenler</span><span class="en">Good to know</span></h2>
+    <div class="tr">
+      <ul>
+        <li><strong>Reklamlar gerçek</strong>, ama yayın öncesi seyrek çıkabilir ya da hiç çıkmayabilir. Lütfen reklamlara <strong>bilerek tıklama</strong>; reklam hesabımıza zarar verebilir.</li>
+        <li>Test sürümleri arasında <strong>ilerleme sıfırlanabilir</strong>. Bu test için normal.</li>
+        <li>Satın almalar test hesabında değilse gerçek ödemedir; emin değilsen satın alma yapma.</li>
+      </ul>
+      <h3>Bilinen sorunlar</h3>
+      <ul>
+      </ul>
+    </div>
+    <div class="en">
+      <ul>
+        <li><strong>Ads are real</strong>, but before launch they may show rarely or not at all. Please <strong>don't tap ads on purpose</strong>; it can hurt our ad account.</li>
+        <li><strong>Progress may be reset</strong> between test builds. That's expected for a test.</li>
+        <li>Purchases are real payments unless your account is set up as a test account; if unsure, don't buy.</li>
+      </ul>
+      <h3>Known issues</h3>
+      <ul>
+      </ul>
+    </div>
+    <p>
+      <a href="../privacy.html"><span class="tr">Gizlilik Politikası</span><span class="en">Privacy Policy</span></a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../privacy.html"><span class="tr">Gizlilik Politikası</span><span class="en">Privacy Policy</span></a> · <a href="https://instagram.com/blockiotimerush">@blockiotimerush</a></p>
+    <p>© 2026 Mustafa Sahin</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById("langBtn");
+    btn.addEventListener("click", function () {
+      var toEn = !root.classList.contains("lang-en");
+      root.classList.toggle("lang-en", toEn);
+      root.lang = toEn ? "en" : "tr";
+      document.title = toEn ? "Blockio Testers" : "Blockio Test Ekibi";
+      try { localStorage.setItem("blockio-lang", toEn ? "en" : "tr"); } catch (e) {}
+    });
+    if (root.classList.contains("lang-en")) { document.title = "Blockio Testers"; }
+  })();
+</script>
+</body>
+</html>
