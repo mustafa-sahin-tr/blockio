@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Blockio</title>
+  <meta name="description" content="Get Blockio: Time Rush on the App Store or Google Play.">
+  <link rel="icon" type="image/png" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <script>
+    // The story's Link sticker points here: send each phone straight to its own store.
+    (function () {
+      var ua = navigator.userAgent || "";
+      var isIos = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      if (isIos) {
+        location.replace("https://apps.apple.com/app/id6819092132");
+      } else if (/Android/.test(ua)) {
+        location.replace("https://play.google.com/store/apps/details?id=com.mtafasahin.blockiotimerush");
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .get { text-align: center; padding: 48px 24px; }
+    .get img { border-radius: 24px; }
+    .get h1 { margin: 16px 0 8px; }
+    .get .stores { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <article class="card get">
+    <img src="../icon.png" alt="" width="96" height="96">
+    <h1>Blockio: Time Rush</h1>
+    <p>Block puzzle · travel the world block by block</p>
+    <div class="stores">
+      <a class="btn" href="https://apps.apple.com/app/id6819092132">App Store</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.mtafasahin.blockiotimerush">Google Play</a>
+    </div>
+  </article>
+</main>
+</body>
+</html>
